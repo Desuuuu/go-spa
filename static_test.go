@@ -12,6 +12,8 @@ import (
 
 func Example() {
 	http.Handle("/", spa.StaticHandler(http.Dir("/static")))
+
+	http.ListenAndServe("localhost:3000", nil)
 }
 
 func TestStaticHandler(t *testing.T) {

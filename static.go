@@ -1,5 +1,5 @@
 // Package spa implements a http.Handler to simplify the process of serving
-// static files for SPAs
+// static files for SPAs.
 package spa
 
 import (
@@ -29,7 +29,7 @@ type handler struct {
 // also use the fallback logic.
 //
 // Any request ending in "/index.html" is redirected to the same path, without
-// the final "index.html". This can be disabled using IndexRedirect.
+// the final "index.html". This can be disabled using NoIndexRedirect.
 func StaticHandler(fs http.FileSystem, opts ...Option) http.Handler {
 	h := &handler{
 		fs:            fs,
